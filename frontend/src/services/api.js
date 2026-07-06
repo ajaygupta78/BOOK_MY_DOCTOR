@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Central Axios Client pointing to our Flask Backend development server port
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://book-my-doctor-2pyd.onrender.com/api',
   headers: {
     'Content-Type': 'application/json'
   }
