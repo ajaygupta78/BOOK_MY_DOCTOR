@@ -1,0 +1,299 @@
+/* =====================================================================
+   BOOK MY DOCTOR: Global Stylesheet & Design System
+   ===================================================================== */
+
+/* Global Variables & Colors */
+:root {
+  --primary-gradient: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+  --secondary-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --accent-gradient: linear-gradient(135deg, #0d9488 0%, #10b981 100%);
+  --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+/* Base Settings */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .outfit-font {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseHeart {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.1); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.1); }
+  70% { transform: scale(1); }
+}
+
+@keyframes floatElement {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animated-fade {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.pulse-heart {
+  animation: pulseHeart 1.5s infinite;
+}
+
+.float-card {
+  animation: floatElement 4s ease-in-out infinite;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--card-shadow);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+}
+
+/* Premium Buttons */
+.btn-primary-grad {
+  background: var(--primary-gradient);
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px -3px rgba(13, 148, 136, 0.4);
+}
+
+.btn-primary-grad:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(13, 148, 136, 0.5);
+  color: white;
+}
+
+.btn-accent-grad {
+  background: var(--accent-gradient);
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px -3px rgba(16, 185, 129, 0.4);
+}
+
+.btn-accent-grad:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(16, 185, 129, 0.5);
+  color: white;
+}
+
+/* Navigation Bar Styling */
+.navbar-custom {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand-custom {
+  font-weight: 800;
+  font-size: 1.5rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Sidebar Custom Styling */
+.sidebar-layout {
+  min-height: calc(100vh - 80px);
+  background: var(--secondary-gradient);
+  border-radius: 0 20px 20px 0;
+  padding: 30px 20px;
+  color: #94a3b8;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 8px;
+  transition: all 0.25s ease;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.sidebar-link.active {
+  background: var(--primary-gradient);
+  box-shadow: 0 4px 15px -3px rgba(2, 132, 199, 0.4);
+}
+
+/* Form Styling */
+.form-control-custom {
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+
+.form-control-custom:focus {
+  border-color: #0d9488;
+  box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.15);
+  outline: none;
+}
+
+/* Modern Badges */
+.badge-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.badge-pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.badge-approved {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+.badge-rejected {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.badge-completed {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.badge-cancelled {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+/* Dashboard Analytics Widget Card */
+.stat-widget {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+/* Heartbeat Line Drawing for 404 */
+.heartbeat-svg {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawLine 4s linear infinite;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Testimonial Quote Bubble */
+.quote-card {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: var(--card-shadow);
+}
+
+.quote-card::before {
+  content: '“';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-family: 'Outfit';
+  font-size: 5rem;
+  color: rgba(13, 148, 136, 0.1);
+  line-height: 1;
+}
+
+/* FAQ Grid Style */
+.faq-accordion .accordion-item {
+  border: none;
+  background: white;
+  margin-bottom: 12px;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 15px -5px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.faq-accordion .accordion-button {
+  padding: 18px 24px;
+  font-weight: 600;
+  color: #0f172a;
+  background: white;
+  border: none;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background: rgba(13, 148, 136, 0.03);
+  color: #0d9488;
+  box-shadow: none;
+}
+
+.faq-accordion .accordion-button:focus {
+  box-shadow: none;
+}
