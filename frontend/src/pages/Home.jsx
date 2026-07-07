@@ -28,10 +28,10 @@ const Home = () => {
               </p>
               
               <div className="d-flex flex-wrap gap-3">
-                <Link to="/doctors" className="btn btn-accent-grad btn-lg rounded-pill px-4 fw-semibold text-white">
+                <Link to="/login" className="btn btn-accent-grad btn-lg rounded-pill px-4 fw-semibold text-white">
                   <i className="bi bi-search-heart me-2"></i> Find Doctor
                 </Link>
-                <Link to="/hospitals" className="btn btn-outline-light btn-lg rounded-pill px-4 fw-semibold">
+                <Link to="/login" className="btn btn-outline-light btn-lg rounded-pill px-4 fw-semibold">
                   <i className="bi bi-building me-2"></i> View Hospitals
                 </Link>
               </div>
