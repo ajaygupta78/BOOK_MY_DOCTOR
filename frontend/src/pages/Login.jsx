@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import axios from 'axios';
+import API from '../services/api';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -51,7 +51,7 @@ const Login = () => {
     setForgotAlert('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/forgot-password', { email: forgotEmail });
+      const response = await API.post('/auth/forgot-password', { email: forgotEmail });
       setForgotAlert(response.data.message);
       setForgotEmail('');
     } catch (err) {

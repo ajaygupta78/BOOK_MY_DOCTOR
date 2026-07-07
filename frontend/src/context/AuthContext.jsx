@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
-import axios from 'axios';
+import API from '../services/api';
 
 const AuthContext = createContext(null);
 
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await API.post('/auth/login', { email, password });
       const { token: jwtToken, user: userData } = response.data;
 
       // Save to localStorage
@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (patientData) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', patientData);
+     const response = await API.post('/auth/register', patientData);
       return { success: true, message: response.data.message };
     } catch (error) {
       const errorMsg = error.response?.data?.message || 'Registration failed. Please try again.';
