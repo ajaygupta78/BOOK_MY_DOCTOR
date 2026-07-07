@@ -28,10 +28,10 @@ const Footer = () => {
               Book My Doctor is a complete online appointment scheduling and medical management system. We bridge the gap between patients, top hospitals, and specialized doctors to offer premium healthcare at your fingertips.
             </p>
             <div className="d-flex gap-3 mt-4">
-              <a href="#" className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style={{ width: '36px', height: '36px' }}><i className="bi bi-facebook"></i></a>
-              <a href="#" className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style={{ width: '36px', height: '36px' }}><i className="bi bi-twitter-x"></i></a>
-              <a href="#" className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style={{ width: '36px', height: '36px' }}><i className="bi bi-instagram"></i></a>
-              <a href="#" className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style={{ width: '36px', height: '36px' }}><i className="bi bi-linkedin"></i></a>
+              <a href="https://www.facebook.com/share/1DNq7GtDwv/" className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style={{ width: '36px', height: '36px' }}><i className="bi bi-facebook"></i></a>
+              <a href="https://x.com/ajaygupta113715" className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style={{ width: '36px', height: '36px' }}><i className="bi bi-twitter-x"></i></a>
+              <a href="https://www.instagram.com/innocent__boy242?igsh=dHkxa3o5MXFhNW5s" className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style={{ width: '36px', height: '36px' }}><i className="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/ajay-gupta18/" className="btn btn-outline-light btn-sm rounded-circle d-flex align-items-center justify-content-center" style={{ width: '36px', height: '36px' }}><i className="bi bi-linkedin"></i></a>
             </div>
           </div>
 
@@ -103,7 +103,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-md-5 text-center text-md-end mt-2 mt-md-0" style={{ fontSize: '0.85rem' }}>
-            <span className="text-secondary">Designed with ❤️ for Healthcare Excellence</span>
+            <span className="text-secondary">Designed By ❤️ Ajay Gupta</span>
           </div>
         </div>
 
