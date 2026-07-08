@@ -4,7 +4,7 @@
 
 /* Global Variables & Colors */
 :root {
-  --primary-gradient: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+  --primary-gradient: linear-gradient(135deg, #1602c7 0%, #0d9488 100%);
   --secondary-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   --accent-gradient: linear-gradient(135deg, #0d9488 0%, #10b981 100%);
   --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
